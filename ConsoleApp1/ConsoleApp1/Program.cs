@@ -9,21 +9,25 @@ namespace ConsoleApp1
             int WagePerHr = 20;
             Random random = new Random();
             int value = random.Next(0, 3);
-            if (value == 0)
+            switch (value)
             {
-                Console.WriteLine("Employee is absent");
-            }
-            else if (value == 1)
-            {
-                Console.WriteLine("Employee is working part time");
-                int Salary = WagePerHr * 4;
-                Console.WriteLine("Salary for part time is " + Salary);
-            }
-            else
-            {
-                Console.WriteLine("Employee is working full time");
-                int Salary = WagePerHr * 8;
-                Console.WriteLine("Salary for full time is " + Salary);
+                case 0:
+                    Console.WriteLine("Employee is absent");
+                    break;
+                case 1:
+                    Console.WriteLine("Employee is present part time");
+                    int Salary = WagePerHr * 4;
+                    Console.WriteLine("salary for part time is " + Salary);
+                    break;
+                case 2:
+                    Console.WriteLine("Employee is present full time");
+                    int SalaryFulltime = WagePerHr * 8;
+                    Console.WriteLine("Salary for full time is " + SalaryFulltime);
+                    break;
+                default:
+                    Console.WriteLine("exit");
+                    break;
+
             }
         }
     }
