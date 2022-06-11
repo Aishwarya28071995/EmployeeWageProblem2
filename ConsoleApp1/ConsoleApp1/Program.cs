@@ -6,7 +6,18 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Welcome to Employee Wage Computation Program");
+            Random random = new Random();
+            int value = random.Next(0, 2);
+            if (value == 0)
+            {
+                Console.WriteLine("Employee is absent");
+                Console.WriteLine(value);
+            }
+            else
+            {
+                Console.WriteLine("Employee is present");
+                Console.WriteLine(value);
+            }
         }
     }
 }
